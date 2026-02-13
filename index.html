@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOE Admission Policy Scenarios 2026/2027</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-box {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            border: 2px solid;
+            background: transparent;
+        }
+        
+        .new-cutoff { border-color: #8b1e3f; }
+        .old-cutoff { border-color: #456990; }
+        .flexibility { border-color: #49beaa; }
+        .exempt { border-color: #f5dd90; }
+        
+        .scenario-group {
+            margin-bottom: 40px;
+        }
+        
+        .scenario-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e5e7eb;
+        }
+        
+        .flow-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .flow-box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .flow-arrow {
+            font-size: 24px;
+            color: #9ca3af;
+            font-weight: bold;
+        }
+        
+        .condition {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+        
+        .result {
+            font-size: 18px;
+            font-weight: 700;
+            color: #424b54;
+            margin-top: 8px;
+        }
+        
+        .detail {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+        
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .branching {
+            display: flex;
+            gap: 15px;
+            margin-left: 30px;
+        }
+        
+        .branch {
+            flex: 1;
+        }
+        
+        .equivalency-table {
+            margin: 20px 0;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .equivalency-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .equivalency-table th {
+            background: #f3f4f6;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .equivalency-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .highlight-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MOE Admission Policy Decision Tree</h1>
+        <p class="subtitle">Academic Year 2026/2027 and Beyond | All Scenarios Mapped</p>
+        
+        <div class="equivalency-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>British System</th>
+                        <th>IB/American System</th>
+                        <th>Age (New Cut-off)</th>
+                        <th>Age (Old Cut-off)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>FS1</strong></td>
+                        <td>Pre-KG</td>
+                        <td>3 by 31 Dec</td>
+                        <td>3 by 31 Aug</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FS2</strong></td>
+                        <td>KG1</td>
+                        <td>4 by 31 Dec</td>
+                        <td>4 by 31 Aug</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Year 1</strong></td>
+                        <td>KG2</td>
+                        <td>5 by 31 Dec</td>
+                        <td>5 by 31 Aug</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Year 2</strong></td>
+                        <td>Grade 1</td>
+                        <td>6 by 31 Dec</td>
+                        <td>6 by 31 Aug</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- SCENARIO 1 -->
+        <div class="scenario-group">
+            <div class="scenario-title">Scenario 1: currently enrolled students (2025/2026)</div>
+            <p class="subtitle" style="margin-top: -15px; margin-bottom: 20px; color: #ff3b3f; font-weight: 700; text-transform: uppercase;">Exempt from new cut-off</p>
+            <div class="flow-chart">
+                <div class="flow-step">
+                    <div class="flow-box exempt" style="border-color: #ff3b3f; background: white;">
+                        <div class="condition">Student enrolled in ANY school/nursery/ECC in 2025/2026</div>
+                        <div class="detail">Includes public and private institutions</div>
+                        <div class="result">→ OLD CUT-OFF (31 Aug) applies indefinitely</div>
+                        <div class="note"><strong>Protected Status:</strong> These students never fall under new cut-off, regardless of future transfers between schools or curricula</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCENARIO 2 -->
+        <div class="scenario-group">
+            <div class="scenario-title">Scenario 2: students transferring (any year)</div>
+            <p class="subtitle" style="margin-top: -15px; margin-bottom: 20px; color: #ff3b3f; font-weight: 700; text-transform: uppercase;">Academic continuity - transfers with existing cut-off</p>
+            <div class="flow-chart">
+                <div class="flow-step">
+                    <div class="flow-box exempt" style="border-color: #ff3b3f; background: white;">
+                        <div class="condition">Student transferring between schools OR between curricula OR from abroad</div>
+                        <div class="detail">Any academic year starting 2026/2027</div>
+                        <div class="result">→ ACADEMIC CONTINUITY applies</div>
+                        <div class="note"><strong>Transfer Principle:</strong> Student transfers WITH their existing cut-off (old or new). The cut-off that applied in the previous school continues to apply. Academic progression continues: FS1/Pre-KG → FS2/KG1 → Year 1/KG2, regardless of which cut-off originally applied.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCENARIO 3 -->
+        <div class="scenario-group">
+            <div class="scenario-title">Scenario 3: students born Sep-Dec turning 3, never enrolled, enrolling in BRITISH curriculum</div>
+            <p class="subtitle" style="margin-top: -15px; margin-bottom: 20px; color: #ff3b3f; font-weight: 700; text-transform: uppercase;">Flexibility available - parents and school decide</p>
+            <div class="flow-chart">
+                <div class="flow-step">
+                    <div class="flow-box flexibility" style="border-color: #ff3b3f; background: white;">
+                        <div class="condition">Born: 1 Sep - 31 Dec of any year</div>
+                        <div class="detail">Never enrolled in any school system before</div>
+                        <div class="detail">Do NOT turn 3 by start of school year (late Aug/early Sep)</div>
+                        <div class="detail">Enrolling to <strong>BRITISH curriculum</strong></div>
+                        <div class="result">→ SCHOOL + PARENTS DECIDE if ready for FS1</div>
+                        <div class="note"><strong>British Curriculum Flexibility:</strong> For students born Sep-Dec enrolling in British curriculum, who do not turn 3 by start of the school year, parents and school jointly decide if ready for FS1. If deemed not ready, may join FS1 the following academic year.</div>
+                    </div>
+                </div>
+                <div style="margin-left: 30px; margin-top: 15px;">
+                    <div class="flow-box flexibility" style="border-color: #ff3b3f; background: white; max-width: 800px;">
+                        <strong>Special Cases (students never enrolled in school system, enrolling in British curriculum):</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.8;">
+                            <li><strong>Sep-Dec 2022 in 2026/2027:</strong> Will be 4 by 31 Dec 2026 but not by school start. Parents + school decide FS1 or FS2 only as a one-off exemption</li>
+                            <li><strong>Sep-Dec 2023 in 2026/2027:</strong> Will be 3 by 31 Dec 2026 but not by school start. Parents + school decide FS1 now or delay to 2027/2028</li>
+                            <li><strong>Sep-Dec births in any future year:</strong> Same flexibility applies when turning 3 and enrolling in British curriculum</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCENARIO 4 -->
+        <div class="scenario-group">
+            <div class="scenario-title">Scenario 4: students born Sep-Dec turning 3, never enrolled, enrolling in IB/AMERICAN curriculum</div>
+            <p class="subtitle" style="margin-top: -15px; margin-bottom: 20px; color: #ff3b3f; font-weight: 700; text-transform: uppercase;">New cut-off applies - no flexibility</p>
+            <div class="flow-chart">
+                <div class="flow-step">
+                    <div class="flow-box new-cutoff" style="border-color: #ff3b3f; background: white;">
+                        <div class="condition">Born: 1 Sep - 31 Dec of any year</div>
+                        <div class="detail">Never enrolled in any school system before</div>
+                        <div class="detail">Do NOT turn 3 by start of school year (late Aug/early Sep)</div>
+                        <div class="detail">Enrolling to <strong>IB or AMERICAN curriculum</strong></div>
+                        <div class="result">→ NEW CUT-OFF (31 Dec) applies - NO flexibility</div>
+                        <div class="note"><strong>No Choice:</strong> IB and American curriculum schools must apply new cut-off strictly. Age by 31 December determines placement with no parental/school discretion.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCENARIO 5 -->
+        <div class="scenario-group">
+            <div class="scenario-title">Scenario 5: all other students never enrolled (IB/American schools - every year from 2026/2027)</div>
+            <p class="subtitle" style="margin-top: -15px; margin-bottom: 20px; color: #ff3b3f; font-weight: 700; text-transform: uppercase;">New cut-off applies - no flexibility</p>
+            <div class="flow-chart">
+                <div class="flow-step">
+                    <div class="flow-box new-cutoff" style="border-color: #ff3b3f; background: white;">
+                        <div class="condition">Student never enrolled in any school system before</div>
+                        <div class="detail">Does not meet exemption criteria (not transferring, not previously enrolled)</div>
+                        <div class="detail">Enrolling to <strong>IB or AMERICAN curriculum</strong></div>
+                        <div class="result">→ NEW CUT-OFF (31 Dec) applies - NO flexibility</div>
+                    </div>
+                </div>
+                <div style="margin-left: 30px; margin-top: 15px;">
+                    <div class="flow-box new-cutoff" style="border-color: #ff3b3f; background: white; max-width: 600px;">
+                        <strong>Placement under new cut-off (IB/American):</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>3 by 31 Dec → Pre-KG</li>
+                            <li>4 by 31 Dec → KG1</li>
+                            <li>5 by 31 Dec → KG2</li>
+                            <li>6 by 31 Dec → Grade 1</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CRITICAL CASES -->
+        <div class="highlight-box">
+            <h3>Critical case examples</h3>
+            
+            <div style="margin-top: 15px;">
+                <strong>Example 1: Sep-Dec 2022 child, never enrolled in school system</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li><strong>For 2026/2027:</strong> Parents + school decide FS1 or FS2 only if enrolling in British curriculum (Scenario 3)</li>
+                    <li><strong>For 2027/2028 and beyond:</strong> Would have aged out, this special case doesn't apply</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <strong>Example 2: Born Sep 2023, never enrolled in school system, enrolling to BRITISH curriculum 2026/2027</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Will turn 3 in Sep 2026 (AFTER school starts in late Aug)</li>
+                    <li>Will be 3 by 31 Dec 2026 → meets age requirement for FS1 in 2026/2027</li>
+                    <li>Born Sep-Dec + enrolling in British → flexibility applies (Scenario 3)</li>
+                    <li>Parents + school can choose: enrol in FS1 now (2026/2027), OR delay to 2027/2028</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <strong>Example 3: Born Sep 2023, never enrolled in school system, enrolling to IB/AMERICAN curriculum 2026/2027</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Will turn 3 in Sep 2026 (after school starts)</li>
+                    <li>Will be 3 by 31 Dec 2026 → meets age requirement</li>
+                    <li>Born Sep-Dec but enrolling in IB/American → NO flexibility (Scenario 4)</li>
+                    <li>New cut-off applies strictly: 3 by 31 Dec 2026 → Pre-KG</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <strong>Example 4: Born Oct 2022, never enrolled in school system, enrolling to BRITISH curriculum 2026/2027</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Born Sep-Dec 2022 + enrolling in British → flexibility applies (Scenario 3)</li>
+                    <li>Parents + school decide: FS1 or FS2 based on developmental readiness</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <strong>Example 5: Born Dec 2023, in nursery 2025/2026, enrolling school 2026/2027</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>Was enrolled in nursery in 2025/2026 → exempt from new cut-off (Scenario 1)</li>
+                    <li>Old cut-off applies: not yet 3 by start of school year → NO FS1 / NO Pre-KG in 2026/2027</li>
+                    <li>Remains on old cut-off permanently</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #f3f4f6; border-radius: 8px;">
+            <strong>Key principles:</strong>
+            <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                <li>Once on old cut-off (31 Aug) → always on old cut-off</li>
+                <li>Current enrolment (2025/2026) = permanent protection under old cut-off</li>
+                <li>Transfers = student transfers WITH their cut-off (old or new), academic continuity maintained</li>
+                <li>Sep-Dec students turning 3 enrolling in BRITISH curriculum and never enrolled in school system before = flexibility (parents + school decide)</li>
+                <li>Sep-Dec students turning 3 enrolling in IB/AMERICAN curriculum and never enrolled in school system before = new cut-off applies strictly, no flexibility</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
